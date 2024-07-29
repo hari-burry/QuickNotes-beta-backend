@@ -139,6 +139,11 @@ app.get('/sugbox',async (req,res)=>{
 
 })
 
+app.get('/',(req,res)=>{
+res.send("hello bros");
+})
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
