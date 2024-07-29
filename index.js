@@ -144,7 +144,7 @@ app.get('/',(req,res)=>{
 res.send("hello bros");
 })
 
-app.get('/',(req,res)=>{
+app.get('/test',(req,res)=>{
   const ans=req.query.text;
   const s=`you typed ${ans}`;
   res.send(s);
