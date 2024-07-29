@@ -2,6 +2,7 @@ const cors = require('cors');
 const express = require('express');
 const app = express();
 app.use(cors());
+require('dotenv').config();
 const { MongoClient } = require('mongodb');
 const url = process.env.MONGO_URL;
 const AWS = require('aws-sdk');
