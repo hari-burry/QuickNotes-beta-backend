@@ -144,6 +144,12 @@ app.get('/',(req,res)=>{
 res.send("hello bros");
 })
 
+app.get('/',(req,res)=>{
+  const ans=req.query.text;
+  const s=`you typed ${ans}`;
+  res.send(s);
+})
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
