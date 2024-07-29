@@ -144,7 +144,10 @@ app.get('/',(req,res)=>{
 res.send("hello bros");
 })
 
-
+app.get('/omega',(req,res)=>{
+  const poe="thanks for visiting";
+  res.json(poe);
+})
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
