@@ -18,7 +18,7 @@ const s3 = new AWS.S3();
 
 
 const DBpick = async (subject) => {
-  const client = new MongoClient(url);
+  const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
   try {
     await client.connect();
     console.log('connected successfully');
@@ -95,7 +95,7 @@ app.get('/sub', async (req, res) => {
 
 
 async function subfind(substr){
-     const client=new MongoClient(url);
+  const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
      try{
        await client.connect();
        console.log("connected to the database");
